@@ -21,7 +21,7 @@ public class Q3 {
         searchingProdcutName =productName.nextLine();
         int index = Arrays.binarySearch(products, searchingProdcutName);
         System.out.println("Product index: " + index);
-
+        productName.close();
         //Reverse the sorted array using a classic for loop
         for (int i = 0; i < products.length / 2; i++) {
             String temp = products[i];

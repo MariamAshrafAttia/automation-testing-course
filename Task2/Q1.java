@@ -9,15 +9,14 @@ public class Q1 {
         boolean inStock= true;
 
         System.out.println("Please Enter Product Name");
-        Scanner product = new Scanner(System.in);
-        productName =product.nextLine();
-        Scanner pricing = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        productName = input.nextLine();
         System.out.println("Please Enter Pricing");
-        price =pricing.nextDouble();
-        Scanner QPricing = new Scanner(System.in);
+        price =input.nextDouble();
         System.out.println("Please Enter Quantity");
-        quantityOrdered = QPricing.nextInt();
-        if(inStock== true)
+        quantityOrdered = input.nextInt();
+        input.close();
+        if(inStock)
         {
             System.out.println("Total price : " + (price*quantityOrdered));
         }
