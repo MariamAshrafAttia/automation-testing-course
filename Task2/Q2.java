@@ -4,10 +4,15 @@ public class Q2 {
     public static void main(String[] args) {
         int score;
         System.out.println("Enter score : ");
-        Scanner grade = new Scanner(System.in);
-        score = grade.nextInt();
+        Scanner input = new Scanner(System.in);
+        score = input.nextInt();
+        input.close();
 
-        if (score>= 90)
+        if(score< 0)
+        {
+            System.out.println("Invalid grade");
+        }
+        else if (score>= 90)
         {
             System.out.println("Excellent");
         }
@@ -22,10 +27,6 @@ public class Q2 {
         else if(score <60)
         {
             System.out.println("Fail");
-        }
-        else
-        {
-            System.out.println("Invalid grade");
         }
     }
 }
